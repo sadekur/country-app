@@ -2,12 +2,10 @@ import React from 'react';
 import style from './country.module.css';
 
 export default function Country({ name, population, capital, flags, area, onRemoveCountry }) {
-  console.log(onRemoveCountry);
 
-  const handleRemoveCountry = (name) => {
-    console.log(name);
-  }
-  
+    const handleRemoveCountry = (name) => {
+        onRemoveCountry(name);
+    }
   return (
     <article className={style.country}>
       <div>
@@ -16,7 +14,9 @@ export default function Country({ name, population, capital, flags, area, onRemo
         <h3>Population: {population}</h3>
         <h3>Capital: {capital}</h3>
         <h3>Area: {area}</h3>
-        <button onClick={() => handleRemoveCountry(name.common)} className={style.btn}>Remove Country</button>
+        <button onClick={() => {
+            handleRemoveCountry(name.common);
+          }} className={style.btn}>Remove Country</button>
       </div>
     </article>
   );
