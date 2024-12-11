@@ -1,7 +1,13 @@
 import { useEffect, useState } from "react";
+import { BrowserRouter, Route, Router, Routes } from "react-router-dom";
 import Countries from "./components/Countries";
 import "./App.css";
 import Search from "./components/Search";
+import Home from "./components/Home";
+import About from "./components/About";
+import Contact from "./components/Contact";
+import Blogs from "./components/Blogs";
+import NavBar from "./components/NavBar";
 
 const url = "https://restcountries.com/v3.1/all";
 function App() {
@@ -44,11 +50,20 @@ function App() {
 
   return (
     <>
+    <BrowserRouter>
+      <NavBar />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/Blogs" element={<Blogs />} />
+      </Routes>
       <h1>Country App</h1>
       <Search onSearch={handleSearch} />
       {loading && <h2>Loading...</h2>}
       {error && <h2>{error.message}</h2>}
       {countries && <Countries countries={filteredCountries } onRemoveCountry={handleRemoveCountry} />}
+      </BrowserRouter>
     </>
   );
 }

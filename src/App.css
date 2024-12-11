@@ -11,3 +11,22 @@ input {
     text-align: center;
     font-size: 3rem;
   }
+  .navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #333;
+    padding: 10px 20px;
+    height: 10vh;
+  }
+  .nav-link {
+    color: aqua;
+    margin: 1rem;
+    text-decoration: none;
+  }
+  .nav-link:hover {
+    color: #ffae00;
+  }
+  .navbar .active {
+    color: #b07d0d;
+  }
