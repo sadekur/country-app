@@ -30,3 +30,25 @@ input {
   .navbar .active {
     color: #b07d0d;
   }
+  section {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1rem;
+    padding: 1rem;
+  }
+  article {
+    padding: 1rem;
+    border: 1px solid #ccc;
+    background-color: aqua;
+  }
+  @media screen and (max-width: 600px) {
+    section{
+      grid-template-columns: auto auto;
+    }
+  }
+  @media screen and (max-width: 425px) {
+    section{
+      grid-template-columns: auto;
+    }
+    
+  }

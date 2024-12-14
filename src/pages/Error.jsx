@@ -1,11 +1,11 @@
 import React from 'react'
 
-function Blogs() {
+const Error = () => {
   return (
     <div>
-      <h2>Blogs</h2>
+      <h2>Error</h2>
     </div>
   )
 }
 
-export default Blogs
+export default Error;

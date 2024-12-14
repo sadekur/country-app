@@ -9,6 +9,7 @@ function NavBar() {
         <NavLink className='nav-link' to="/about">About</NavLink>
         <NavLink className='nav-link' to="/contact">Contact</NavLink>
         <NavLink className='nav-link' to="/blogs">Blogs</NavLink>
+        {/* <NavLink className='nav-link' to="/error">Error</NavLink> */}
     </nav>
   )
 }
