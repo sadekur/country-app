@@ -22,7 +22,7 @@ function Blogs() {
             <article key={id}>
               <h2>{title}</h2>
               <p>{turnCatString(body, 100)}</p> 
-              <Link to={`/blog/${title}`}>Read more</Link>
+              <Link to={`/blog/${title}`} state={{id, title, body}}>Read more</Link>
             </article>
           )
         })}
