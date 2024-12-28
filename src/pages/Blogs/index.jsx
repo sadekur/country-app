@@ -12,9 +12,13 @@ function Blogs() {
       return str;
     }
   }
+  const clearBlogs = () => {
+    setBlogs([]);
+  }
   return (
     <div>
       <h2>Blogs</h2>
+      <button onClick={clearBlogs}>Clear Blogs</button>
       <section>
         {blogs.map((blog) => {
           const {id, title, body} = blog;
