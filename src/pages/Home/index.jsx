@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { useState } from "react";
-import Countries from "../components/Countries";
-import Search from "../components/Search";
+import Countries from "../../components/Countries";
+import Search from "../../components/Search";
 const url = "https://restcountries.com/v3.1/all";
 function Home() {
 

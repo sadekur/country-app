@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useLocation, useParams } from "react-router-dom";
-import { blogData } from "../data";
+import { blogData } from "../../data";
 
 const Blog = () => {
   const { title } = useParams();

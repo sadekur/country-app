@@ -1,14 +1,15 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
+import React, { useState } from "react";
 import NavBar from "../layout/NavBar";
+
+import AddBlog from "../pages/AddBlog";
+import Protected from "./Protected";
 import Home from "../pages/Home";
 import About from "../pages/About";
 import Contact from "../pages/Contact";
 import Blogs from "../pages/Blogs";
+import Blog from "../pages/SingleBlog";
 import Error from "../pages/Error";
-import Blog from "../pages/Blog";
-import React, { useState } from "react";
-import AddBlog from "../pages/AddBlog";
-import Protected from "./Protected";
 
 function Index() {
   const [isLigedIn, setLoggedIn] = useState(false);

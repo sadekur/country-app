@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import {blogData} from '../data';
-import '../App.css';
+import {blogData} from '../../data';
+import '../../App.css';
 function Blogs() {
   const [blogs, setBlogs] = useState(blogData);
   
